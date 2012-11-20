@@ -1,0 +1,431 @@
+/* =============================================================================
+ *
+ *      Author:Appnet 
+ *      Author URI:http://www.appnet.com/
+ *
+ * ========================================================================== */ 
+
+@import url('css/reset.css');
+@import url('//fonts.googleapis.com/css?family=Droid+Serif');
+@import url('//fonts.googleapis.com/css?family=PT+Serif');
+
+
+/* =============================================================================
+ *
+ *      BASE ELEMENTS
+ *
+ * ========================================================================== */
+
+body {
+    background:#444;
+    color:#000;
+    font:13px/20px 'Droid Serif', Lucida, Georgia, serif;
+    min-width:960px;
+}
+
+#pagewrap {
+    background:#e7e7e7; 
+    margin:30px auto; 
+    width:960px;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #222;
+    -moz-box-shadow: 0 0 5px #222;
+    box-shadow: 0 0 5px #222;    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-bottom:1px solid #aaa;
+    font-family:'PT Serif', Lucida, Georgia, serif;
+    font-weight:normal;
+    margin:0 0 10px 0;
+    text-transform:uppercase;
+}
+    h1 {font-size:20px; padding:10px 0;}
+    h2 {font-size:18px; padding:10px 0;}
+    h3 {font-size:16px; padding:10px 0 5px 0;}
+    h4 {font-size:14px; padding:5px 0;}
+    h5 {font-size:13px; padding:10px 0;}
+    h6 {font-size:12px; padding:5px 0;}
+
+p, ul, ol {margin:0 0 15px 0;}
+    ul li, ol li {margin:0 0 0 18px;}
+
+
+/*
+ *  IMAGES
+ */
+
+img.center {display:block; margin:10px auto;}
+img.align-r {float:right; margin:0 0 10px 10px;}
+img.align-l {float:left; margin:0 10px 10px 0;}
+img.border {
+    background:#fff;
+    border:1px solid #ccc;
+    padding:4px;
+}
+.nobord {border:0 !important;}
+
+
+/*
+ *  IFRAMES
+ */ 
+
+iframe {
+    background:#fff;
+    border:1px solid #ccc;
+    margin:0;
+    padding:4px;
+}
+
+
+/*
+ *  MISC
+ */
+
+.shadow {
+    -webkit-box-shadow:0 0 3px #666;
+    -moz-box-shadow:0 0 3px #666;
+    box-shadow:0 0 3px #666;
+}
+
+::-moz-selection {
+    background:#3399ff;
+    color:#fff;
+    text-shadow:0 1px 0 #0a3b6c;
+}
+::selection {
+    background:#3399ff;
+    color:#fff;
+    text-shadow:0 1px 0 #0a3b6c;
+}
+
+
+
+/* =============================================================================
+ *
+ *     MAIN CONTENT
+ *
+ * ========================================================================== */
+ 
+a:active {position:relative; top:1px;}
+    a:active img, nav a:active {position:relative; top:0;}
+
+a:link, a:visited, a:active {
+    color:#002b64;
+    border-bottom:1px dotted #002b64;
+    display:inline-block;
+    text-decoration:none;
+    
+    -webkit-transition:background .4s ease, color .4s ease, border-bottom .4s ease;
+    -moz-transition:background .4s ease, color .4s ease, border-bottom .4s ease;
+    -o-transition:background .4s ease, color .4s ease, border-bottom .4s ease;
+    -ms-transition:background .4s ease, color .4s ease, border-bottom .4s ease;
+    transition:background .4s ease, color .4s ease, border-bottom .4s ease;
+}
+    a:hover {
+        background:#fff;
+        color:#333;
+        border-bottom:1px dotted #333;
+        text-decoration:none;
+    }
+
+
+/*
+ *  HEADER AREA
+ */
+ 
+header {}
+
+#tophead {border-bottom:1px solid #aaa;}
+    #logo {float:left; margin:20px;}
+    p.contactinfo {
+        float:right; 
+        margin:43px 20px 0 20px; 
+        padding:0; 
+        width:25%;
+    }
+
+#fader {
+    border:1px solid #ccc;
+        border-left:0; border-right:0;
+    height:320px;
+    overflow:hidden;
+}
+
+nav {
+    border:1px solid #aaa;
+        border-left:0; border-right:0;    
+}
+
+ul#navlist {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+    ul#navlist li {
+        float:left;
+        margin:0;
+        padding:0;
+        position:relative;
+        width:192px;
+    }
+        .ie6 ul#navlist ul {display:none !important;} /* disables dropdowns in ie6 */
+
+ul#navlist li a:link, ul#navlist li a:visited, ul#navlist li a:active {
+    border-bottom:0;
+    color:#000;
+    display:block;
+    font-family:'PT Serif';
+    font-size:15px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    text-transform:uppercase;
+}
+    ul#navlist li a:hover {
+        border-bottom:0;
+        color:#000;
+    }
+
+
+/*
+ *  CONTENT AREA
+ */
+ 
+#content {
+    border-top:1px solid #fff; 
+    border-bottom:1px solid #aaa;
+    padding:2% 0;
+}
+
+article {
+    float:right;
+    margin:0 2% 2% 2%;
+    width:63%; 
+}
+
+.moreinfo {padding:15px 0;}
+.moreinfo p {margin:0; padding:0;}
+
+ul.gallery {list-style:none; margin;0; padding:0;}
+    ul.gallery li {float:left; margin:0; padding:0; text-align:center;} 
+
+
+aside {
+    float:left;
+    margin:0 1% 2% 2%;
+    width:29%;
+}
+
+aside ul {
+    list-style:none; 
+    margin:0; 
+    padding:0;
+}
+    aside ul li {
+        background:#636363 url('bullet.png') 0 50% no-repeat;
+        border:2px solid #636363;
+        color:#fff;
+        margin:0 0 5px 0; 
+        padding:5px 10px 5px 40px;
+    }
+        aside ul li:hover {background:#636363 url('bullet-over.png') 0 50% no-repeat;}
+        aside ul li:last-child {margin:0;}
+
+
+/*
+ *  FOOTER AREA
+ */
+ 
+footer {
+    border-top:1px solid #fff;
+    color:#000;
+    font-size:12px;
+    line-height:16px;
+    padding:20px 0;
+}
+
+footer .l {
+    float:left;
+    margin:0 2%;
+    width:46%;
+}
+
+footer .r {
+    float:right;
+    margin:0 2%;
+    width:46%;
+}
+
+footer .sl {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+    footer .sl li {
+        display:inline-block;
+        margin:0 10px 0 0;
+        padding:0 0 7px 0;
+    }
+
+footer .ci {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+    footer .ci li {
+        float:left;
+        margin:0;
+        padding:0 0 7px 0;
+        width:50%;
+    }
+
+footer small {
+    clear:both;
+    display:block;
+    margin:0;
+    padding:15px 0;
+}
+
+
+
+/* =============================================================================
+ *
+ *      FORMS
+ *
+ * ========================================================================== */ 
+
+form {margin:0 0 15px 0; padding:0 0 15px 0;}
+    form div {clear:both; display:block; overflow:hidden;}
+    form div.warning {
+        font-size:13px;
+        height:25px;
+        line-height:25px;
+        margin:0 0 10px 10px;
+        padding:0 0 0 35px;
+        width:215px;
+    }
+    form span.star {color:#ff0000;}
+    label {
+        float:left;
+        height:26px;
+        line-height:26px;
+        margin:3px 0;
+        width:130px;
+    }
+    input, textarea, select {
+        float:left;
+        font:13px/18px 'Droid Serif', Lucida, Georgia, serif;
+        margin:3px 0;
+        padding:5px;
+        width:300px;
+    }
+        select {width:312px;}
+        input:focus, textarea:focus, select:focus {outline:none;}
+    input.submit {
+        cursor:pointer;
+        margin:10px 0 0 130px;
+        width:85px;
+    }
+
+
+/*
+ *  FORM COLORS
+ */
+
+div.warning {
+    background:#fbe3e4 url('css/images/error.gif') no-repeat 10px center;
+    border:1px solid #fbc2c4;
+    color:#900;
+}
+input, textarea, select {
+    background:#f5f5f5;
+    border:1px solid #ccc;
+    color:#666;
+    
+    -webkit-transition:background .4s ease, border .4s ease, color .4s ease;
+    -moz-transition:background .4s ease, border .4s ease, color .4s ease;
+    -o-transition:background .4s ease, border .4s ease, color .4s ease;
+    -ms-transition:background .4s ease, border .4s ease, color .4s ease;
+    transition:background .4s ease, border .4s ease, color .4s ease;
+}
+input:focus, textarea:focus, select:focus {
+    background:#fff;
+    border:1px solid #999;
+    color:#333;
+}
+input.submit {
+    background:#333;
+    border:1px solid #222;
+    color:#fff;
+    
+    -webkit-transition:background .4s ease;
+    -moz-transition:background .4s ease;
+    -o-transition:background .4s ease;
+    -ms-transition:background .4s ease;
+    transition:background .4s ease;
+}
+input.submit:hover {background:#444;}    
+
+
+/*
+ *  COMMENT FORM
+ */
+
+#commentForm h3 {clear:both; padding:20px 0 5px 0;}
+#commentForm h3.first {padding:0 0 5px 0;}
+#commentForm h4 {clear:both; padding:20px 0 5px 0;}
+#commentForm input.reset {margin:10px 0 0 10px;}
+
+	
+/*
+ *  REACH QUICKLY FORM
+ */
+
+#reachQuickly {width:100%;}
+    #reachQuickly div.warning {
+        clear:both;
+        float:left;
+        padding:0 0 0 36px;
+        text-align:left;
+        width:194px;
+    }
+    #reachQuickly label {
+        float:left;
+        margin:3px 0 0 0;
+        width:100%;
+    }
+    #reachQuickly input, #reachQuickly textarea, #reachQuickly select {
+        float:left;
+        font:12px/16px 'Droid Serif', Lucida, Georgia, serif;
+        margin:0 0 3px 0;
+        padding:5px;
+        width:286px;
+    }
+    #reachQuickly input.submit {
+        cursor:pointer;
+        margin:3px 0 0 0;
+        width:298px;
+    }
+
+	
+/*
+ *  GET DIRECTIONS FORM
+ */
+
+#getDirections {margin:0 0 15px 0; padding:0;}
+    #getDirections td {font-size:12px;}
+    #getDirections input, #getDirections textarea, #getDirections select {
+        font:12px/16px 'Droid Serif', Lucida, Georgia, serif;
+        margin:3px 0 6px 0;
+        padding:5px;
+        width:95%;
+    }
+    #getDirections input.submit {
+        cursor:pointer;
+        margin:0;
+        width:112px;
+    }

@@ -1,0 +1,83 @@
+/* =============================================================================
+ *
+ *      Author:     Appnet 
+ *      Author URI: http://www.appnet.com/
+ *      Template:   Blue River
+ *
+ * ========================================================================== */ 
+
+/* =============================================================================
+ *
+ *      MEDIA QUERIES
+ *
+ * ========================================================================== */ 
+
+/* above 1280 */
+.container {width:1280px;}
+
+/* 960 - 1280 */
+@media screen and (max-width: 1280px) {
+
+.container {width:960px;}
+
+}
+
+/* 480 - 960 */ 
+@media screen and (max-width: 960px) {
+
+.container {width:90%;}
+#fader {height:200px;}
+nav {
+    height: auto;
+    position: absolute; 
+        top: 200px;
+        left: 2%;
+    margin: 0 auto;
+    width: 96%;
+}
+
+}
+
+/* 320 - 480 */ 
+@media screen and (max-width: 480px) {
+
+#fader {height: 125px;} 
+nav {
+    position: absolute; 
+        top: 140px;
+        left: 5%;
+    margin: 0 auto;
+    width: 90%;
+     
+    -webkit-box-shadow: 0 0 0 #aaa;
+    -moz-box-shadow: 0 0 0 #aaa;
+    box-shadow: 0 0 0 #aaa;
+}
+article {float: none; margin: 0 0 20px 0; width: 100%;}
+aside {float: none; margin: 0 0 20px 0; width: 100%;}
+.service-list li img {width:60%;} 
+footer div div {float:left; margin:0 0 15px 0; width:48%;}
+footer div:first-child {width:100%;}
+footer .sl li {width:20%;}
+footer .hsm {display:none;}
+form input, form textarea, form select {width: 95%;}
+form input.submit {margin: 10px 10px 0 0;}
+
+}
+
+/* 0 - 320 */ 
+@media screen and (max-width: 320px) {
+
+header {height: 360px;}
+ul#navlist li {
+    border-bottom:1px dotted #aaa;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.service-list li img {float:none; margin:0 0 2% 0; width:96%;}
+footer .sl li {width:33%;}
+
+} 
