@@ -1,5 +1,17 @@
 <?php
 
+// delete files
+if ($_GET['delete']=='yes') {
+    $sm_file = $_GET['file'];
+    $sm_file = str_replace('../../', '', $sm_file);
+    $lg_file = str_replace('proofs/thumbs', 'proofs', $sm_file);
+    chdir('../../');
+    unlink($sm_file);
+    unlink($lg_file);
+    chdir('projects/proof-gallery/');
+    $deleted_message = '<p>Your file has successfully been deleted. <a href="default.php">Click here if you are finished deleting files.</a></p>';
+}
+
 $project = "gallery";
 
 // generates thumbnail
@@ -85,13 +97,15 @@ if(count($image_files)) {
             $current_letter = $first_letter;
         }
     
-        $display_gallery .= '<div class="span3"><h4>'.$title2.'</h4><a href="photo.php?file='.$file.'" title="'.$title2.'"><img src="'.$thumbnail_image.'" height="'.$thumb_height.'" width="'.$thumb_width.'"></a><a href="photo.php?file='.$file.'" title="'.$title2.'" class="btn btn-inverse">View Proof</a></div>';
+        $delete_mode = ($_GET['mode']=="delete") ? '<p><a href="?file='.$thumbnail_image.'&delete=yes&mode=delete" onclick="return confirm(\'Are you sure you want to delete '.$file.'?\');" class="btn btn-danger">Delete</a></p>' : '';
+        $display_gallery .= '<div class="span3"><h4>'.$title2.'</h4><a href="photo.php?file='.$file.'" title="'.$title2.'"><img src="'.$thumbnail_image.'" height="'.$thumb_height.'" width="'.$thumb_width.'"></a><p><a href="photo.php?file='.$file.'" title="'.$title2.'" class="btn btn-inverse">View Proof</a></p>'.$delete_mode.'</div>';
               
     }
     $display_gallery .= $backlink;
 } else {
     $display_gallery = '<div class="span12"><p class="text-error">ERROR: There are no images in this gallery.</p></span>';
 }
+
 
 ?><!DOCTYPE html>
 <html>
@@ -109,6 +123,7 @@ if(count($image_files)) {
 <div class="container">
 
     <h1>Proof Gallery</h1>
+    <?=(isset($deleted_message)) ? $deleted_message : ''?>
     <p class="lead">Quick Links: <br><?php
     
     $i=0;
