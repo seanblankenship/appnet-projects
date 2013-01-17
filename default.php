@@ -40,6 +40,8 @@
         </div>
     </div>
 
+    <?php include "inc/footer.inc.php"; ?>
+
 </div>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
