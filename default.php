@@ -13,39 +13,34 @@
 
 <div class="container">
 
-    <!-- Main hero unit for a primary marketing message or call to action -->
-    <div class="hero-unit">
-        <h1>Appnet Projects</h1>
-        <p>This is the home of our random projects...hopefully they are of use to someone.</p>
-        <div class="btn-group">
-            <a class="btn btn-inverse btn-large" href="proof-gallery/">Proof Gallery &raquo;</a>
-            <a class="btn btn-inverse btn-large" href="site-templates/">Site Templates &raquo;</a>
-            <a class="btn btn-inverse btn-large" href="media-query-tester/">Media Query Tester &raquo;</a>
-        </div>
-    </div>
-    
-    <!-- Example row of columns -->
+    <h1>Appnet Projects</h1>
+    <p class="lead">Appnet Projects is just a place for us to more easily keep track of some of the things that make our jobs a little easier. Nothing in here is all that awesome or really meant to be seen by the outside world...move along now.</p>
+    <p>&nbsp;</p>
+
+    <hr>
+
     <div class="row">
         <div class="span4">
-            <h2>Proof Gallery</h2>
-            <p>Gallery of all of our current proofs out to clients.</p>
-            <p><a class="btn btn-primary" href="proof-gallery/">View Project &raquo;</a></p>
+            <h4>Proof Gallery</h4>
+            <p>A proof gallery that allows us a way to easily view multiple iterations of all current proofs out to clients.</p>
+            <p><a class="btn btn-success" href="<?=$surl?>/proof-gallery">Proof Gallery &raquo;</a></p>
+            <p>&nbsp;</p>
         </div>
         <div class="span4">
-            <h2>Site Templates</h2>
-            <p>Gallery of sites for a few of our cheaper site templates.</p>
-            <p><a class="btn btn-primary" href="site-templates/">View Project &raquo;</a></p>
+            <h4>Site Templates</h4>
+            <p>A collection of a few of the site templates that we offer... this section is considered to be under construction.</p>
+            <p><a class="btn btn-success" href="<?=$surl?>/site-templates">Site Templates &raquo;</a></p>
+            <p>&nbsp;</p>
         </div>
         <div class="span4">
-            <h2>Media Query Tester</h2>
-            <p>Test any url in multiple sized iframes on the same page.</p>
-            <p><a class="btn btn-primary" href="media-query-tester/">View Project &raquo;</a></p>
+            <h4>Media Query Tester</h4>
+            <p>A super quick and dirty way to test media queries on a site... since it isn't optimized, it works best in Chrome.</p>
+            <p><a class="btn btn-success" href="<?=$surl?>/media-query-tester">Media Query Tester &raquo;</a></p>
+            <p>&nbsp;</p>
         </div>
     </div>
-    
-    <?php include "inc/footer.inc.php"; ?>
 
-</div> <!-- /container -->
+</div>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="js/bootstrap.min.js"></script>
