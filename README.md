@@ -1,2 +1,1 @@
-http://appnetsites.com/projects
-
+Appnet Projects is just a place for us to more easily keep track of some of the things that make our jobs a little easier. Nothing in here is all that awesome or really meant to be seen by the outside world...move along now.
