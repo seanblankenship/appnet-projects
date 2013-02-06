@@ -114,6 +114,11 @@ if(count($image_files)) {
 <link rel="shortcut icon" href="http://appnet.com/favicon.png"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+<style>
+    .menu {height:20px; margin:0; padding:15px;}
+    .slidein {position:relative; top:-200px; -webkit-transition:top 0s ease; -moz-transition:top 0s ease; transition:top 0s ease;}
+    .menu:hover .slidein {top:0;}
+</style>
 </head>
 
 <body>
@@ -122,6 +127,11 @@ if(count($image_files)) {
 
 <div class="container">
 
+    <? $dm = (isset($_GET['mode']) && $_GET['mode']=='delete') ? 'yes' : 'no' ?>
+
+    <p class="pull-right menu">
+        <span<?=($dm=="yes") ? '' : ' class="slidein"'?>><?=($dm=='yes') ? '<i class="icon-ok"></i> <a href="default.php">Finished</a>' : '<i class="icon-remove"></i> <a href="?mode=delete">Delete</a>'?></span>
+    </p>
     <h1>Proof Gallery</h1>
     <?=(isset($deleted_message)) ? $deleted_message : ''?>
     <p class="lead">Quick Links: <br><?php
